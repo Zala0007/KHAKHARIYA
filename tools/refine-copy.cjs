@@ -1,0 +1,1 @@
+﻿const fs=require('fs');const file='template.html';const html=fs.readFileSync(file,'utf8').replace('you.<br>A collection','you.<br> A collection').replace('texture.<br>Every photograph','texture.<br> Every photograph');fs.writeFileSync(file,html);

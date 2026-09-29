@@ -1,0 +1,1 @@
+const fs=require('fs');const source=fs.readFileSync('tools/process-images.cjs','utf8');const array=source.match(/const outlines = (\[[\s\S]*?\n\]);/)[1];fs.writeFileSync('tools/primary-outlines.cjs','// Individually inspected primary product outlines. Coordinates at 800px source width.\nmodule.exports = '+array+';\n');
