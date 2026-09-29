@@ -4,3 +4,4 @@ review/
 dist/
 test-results/
 playwright-report/
+.wrangler/

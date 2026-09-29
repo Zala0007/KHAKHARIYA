@@ -8,6 +8,8 @@ Open `index.html` directly, or run `npm run preview` and visit http://127.0.0.1:
 
 Upload `khakhariya-tiles.zip` or the contents of `dist/` to Cloudflare Pages using Direct Upload. For Git integration, use build command `npm ci && npm run build` and output directory `dist`. Already-processed images are included; image processing is not needed during deployment. Do not deploy `Product/`, review files, development tools or node_modules.
 
+For Cloudflare Workers Git integration, use build command `npm run build` and deploy command `npx wrangler deploy`. The committed `wrangler.jsonc` sets the Worker name to `khakhariya` and the static assets directory to `./dist`, so only the built website is uploaded. Keep the Cloudflare Worker name consistent with this configuration. The existing `npm run preview` command remains the local static preview.
+
 ## Products, names and photographs
 
 Edit `PRODUCTS` in `data.js`, then run `npm run build`.
