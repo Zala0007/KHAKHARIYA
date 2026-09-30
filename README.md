@@ -4,6 +4,8 @@ A static, mobile-first catalogue of **16 designs and all 60 supplied photographs
 
 ## Preview and deploy
 
+Edit page markup in `template.html`, then run `npm run build`. Each build overwrites `index.html` and `dist/index.html` from the template, so changes made only to `index.html` will disappear during deployment. Commit the template changes and the regenerated `index.html` together.
+
 Open `index.html` directly, or run `npm run preview` and visit http://127.0.0.1:4173. The preview serves `dist/`.
 
 Upload `khakhariya-tiles.zip` or the contents of `dist/` to Cloudflare Pages using Direct Upload. For Git integration, use build command `npm ci && npm run build` and output directory `dist`. Already-processed images are included; image processing is not needed during deployment. Do not deploy `Product/`, review files, development tools or node_modules.
